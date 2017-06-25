@@ -33,7 +33,7 @@ class CountingSheep(object):
             number_list = [int(i) for i in str(new_number)]
             print(number_remain)
 
-            # If the
+            # For each number in number remain, check to see if in number list
             for i in number_remain:
                 if n == 99:
                     print("INSOMNIA")
