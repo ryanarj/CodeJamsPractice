@@ -20,55 +20,29 @@ class CountingSheep(object):
 
     def countingSheep(self):
 
-        def multiply(N, x):
-            return N * x
-
+        # A list of all the numbers
         number_remain = [1, 2, 3, 4, 5, 6, 7, 8, 9]
         new_list = []
-        N = int(input('Enter your number: '))
+
+        # Prompt the user to input the a number
+        number = int(input('Enter your number: '))
+
+        # Range over 1 to 100
         for n in range(1, 100):
-            new_N = multiply(N, n)
-            N_list = [int(i) for i in str(new_N)]
+            new_number = number * n
+            number_list = [int(i) for i in str(new_number)]
+            print(number_remain)
+
+            # If the
             for i in number_remain:
                 if n == 99:
                     print("INSOMNIA")
-                if i in N_list:
-                    new_list.append(i)
+
+                # For the numbers in number_list remove the remaining numbers
+                if i in number_list:
                     number_remain.remove(i)
                     if len(number_remain) == 0:
-                        print(new_N)
+                        print(new_number)
                         return
 
-class RevengeOfThePancake(object):
-
-    def pancake(self):
-
-        count = 0
-        input_sign = input('Enter your the types of pancakes: ')
-        sign_list = [i for i in str(input_sign)]
-        for i in sign_list:
-            if i == "-":
-                new_list = [sign_list[:i]]
-
-        for i in sign_list:
-            if i == "-":
-                count += 1
-
-        print(count)
-
-
-#CountingSheep().countingSheep()
-#RevengeOfThePancake().pancake()
-
-
-class Pancake(object):
-
-    def pancake(self):
-
-        K = input('Enter your : ')
-        for i in K:
-            if i == '+':
-                
-
-
-Pancake().pancake()
+CountingSheep().countingSheep()
